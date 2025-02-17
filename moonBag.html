@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Shashi</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<link rel="stylesheet" href="css/aos.css">
+
+	<link rel="stylesheet" href="css/ionicons.min.css">
+
+	<link rel="stylesheet" href="css/flaticon.css">
+	<link rel="stylesheet" href="css/icomoon.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moon Phases with Scroll</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 300vh;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            transition: background 0.5s ease-in-out, background-color 0.5s;
+        }
+        
+    </style>
+</head>
+
+
+	<script src="js/main.js"></script>
+	<script>
+        const moonPhases = [
+            "url('./images/moon1.png')", // New Moon
+            "url('./images/moon2.png')", // Waxing Crescent
+            "url('./images/moon3.png')", // First Quarter
+            "url('./images/moon4.png')", // Waxing Gibbous
+            "url('./images/moon5.png')", // Full Moon
+            "url('./images/moon6.png')", // Waning Gibbous
+            "url('./images/moon7.png')", // Last Quarter
+            "url('./images/moon8.png')"  // Waning Crescent
+        ];
+        
+		document.addEventListener("scroll", () => {
+            let scrollPosition = window.scrollY;
+            let maxScroll = document.body.scrollHeight - window.innerHeight;
+            let index = Math.floor((scrollPosition / maxScroll) * (moonPhases.length - 1));
+            document.querySelector(".background-overlay").style.backgroundImage = moonPhases[index];
+            document.body.style.backgroundColor = `rgb(${255 - index * 30}, ${255 - index * 30}, ${255 - index * 30})`;
+        });
+    </script>
+
+</body>
+
+</html>
